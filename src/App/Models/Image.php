@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
 
-    protected $attributes = ['title'];
+    protected $fillable = ['title'];
+
+    public $timestamps = false;
 
     public function run() {
         return 1 + 1;

@@ -14,4 +14,11 @@ class NewTest extends BaseTestCase
         $this->assertEquals(2, $image->run());
     }
 
+    public function test_add_image()
+    {
+        $imageSaved = Image::create(['title' => 'Image']);
+        $imageReceived = Image::first();
+
+        $this->assertEquals($imageSaved->title, $imageReceived->title);
+    }
 }
